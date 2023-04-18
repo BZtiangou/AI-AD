@@ -45,7 +45,7 @@ a{text-decoration:none;}
 }
 /* 最近影像板块 */
 .recentPic{
-  width: 450px;
+  width: 35%;
   height: 250px;
   margin: 30px 35px 20px 65px;
   /* margin-left: 55px; */
@@ -92,15 +92,15 @@ a{text-decoration:none;}
   height:150px;
 }
 .recentPic .tr2 .img1{
-  margin:0px 50px 0 15px;
-  width:145px;
+  margin:0px 10px 0 15px;
+  width:39%;
   height:180px;
   float:left;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .recentPic .tr2 .img1 .information{
-  width:145px;
+  width:100%;
   height:30px;
   float:left;
 }
@@ -187,13 +187,13 @@ a{text-decoration:none;}
   height:15px;
 }
 .recentPic .tr2 img{
-  width:145px;
+  width:100%;
   height:150px;
 }
 
 /* 条件搜索板块 */
 .search{
-  width: 600px;
+  width: 47%; 
   height: 250px;
   margin: 30px 30px 20px 55px;
   /* margin-left: 55px; */
@@ -204,9 +204,9 @@ a{text-decoration:none;}
   /* text-align: center; */
 }
 .search .tr2{
-  margin:5px 5px 5px 35px;
+  margin:5px 5px 5px 32px;
   height:25px;
-  width:500px;
+  width:450px;
   border: solid 1px gray;
   /* box-shadow: 2px 2px 3px 2.5px rgba(0, 0, 0, 0.2); */
   border-radius: 4px;
@@ -222,12 +222,12 @@ a{text-decoration:none;}
   height:20px;
   border-width:0;
   margin:1px 0 5px 10px;
-  width:450px;
+  width:410px;
   float:left;
   outline: none;
 }
 .search .tr3{
-  margin:5px 5px 5px 35px;
+  margin:5px 5px 5px 10px;
   height:25px;
   width:500px;
 }
@@ -266,8 +266,8 @@ a{text-decoration:none;}
 
 /* 患者档案板块 */
 .record{
-  width: 1150px;
-  height: 350px;
+  width: 90%;
+  height: 310px;
   margin: 10px 35px 20px 65px;
   float: left;
   border-radius: 15px;
@@ -311,7 +311,7 @@ a{text-decoration:none;}
 }
 .record .tr2 .title{
   float:left;
-  width:150px;
+  width:135px;
   height:30px;
 }
 .record .tr2 .title .font{
@@ -330,7 +330,7 @@ a{text-decoration:none;}
 }
 .record .tr2 .title1{
   float:left;
-  width:200px;
+  width:180px;
   height:30px;
 }
 .record .tr2 .title1 .font{
@@ -350,23 +350,23 @@ a{text-decoration:none;}
 .record .tr3{
   margin:0px 20px 0px 30px;
   width:93%;
-  height:242px;
+  height:210px;
 }
 .record .tr3 .line{
   width:100%;
-  height:50px;
+  height:40px;
   border-bottom: 1px;
   border-bottom-style: solid;
   border-bottom-color: #E5E5E5;
   /* border: solid 1px gray; */
 }
 .record .tr3 .line .grid1{
-  margin:13px 26px 18px 23px;
-  width:100px;
+  margin:10px 22px 9px 23px;
+  width:90px;
   float:left;
 }
 .record .tr3 .line .grid2{
-  margin:10px 68px 18px 45px;
+  margin:8.5px 48px 9px 45px;
   padding:2px 0 2px 0;
   width:90px;
   float:left;

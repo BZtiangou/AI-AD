@@ -139,8 +139,8 @@ a{text-decoration:none;}
 
 /* 患者档案板块 */
 .record{
-  width: 1150px;
-  height: 350px;
+  width: 90%;
+  height: 310px;
   margin: 10px 35px 20px 65px;
   float: left;
   border-radius: 15px;
@@ -203,7 +203,7 @@ a{text-decoration:none;}
 }
 .record .tr2 .title1{
   float:left;
-  width:165px;
+  width:150px;
   height:30px;
 }
 .record .tr2 .title1 .font{
@@ -223,23 +223,23 @@ a{text-decoration:none;}
 .record .tr3{
   margin:0px 20px 0px 30px;
   width:93%;
-  height:242px;
+  height:220px;
 }
 .record .tr3 .line{
   width:100%;
-  height:50px;
+  height:40px;
   border-bottom: 1px;
   border-bottom-style: solid;
   border-bottom-color: #E5E5E5;
   /* border: solid 1px gray; */
 }
 .record .tr3 .line .grid1{
-  margin:13px 20px 18px 32px;
+  margin:10px 20px 10px 32px;
   width:70px;
   float:left;
 }
 .record .tr3 .line .grid2{
-  margin:10px 38px 18px 40px;
+  margin:8px 18px 8px 40px;
   padding:2px 0 2px 0;
   width:90px;
   float:left;
