@@ -1,16 +1,16 @@
-@charset "utf-8";
+/* @charset "utf-8";
 @font-face {
     font-family: "阿里妈妈数黑体 Bold";font-weight: 700;src: url("/fonts/Alimama_ShuHeiTi_Bold.woff2") format("woff2"),
     url("/fonts/Alimama_ShuHeiTi_Bold.woff") format("woff");
     font-display: swap;
-  }
+  } */
 /* 以下实际使用若已初始化可删除 .nav height父级需逐级设置为100%*/
-*{margin:0;padding:0;}
+/* *{margin:0;padding:0;}
 body,html{height: 100%;background: #ffffff}
 body,ul{margin:0;padding:0}
 body{font:14px "微软雅黑","宋体","Arial Narrow",HELVETICA;-webkit-text-size-adjust:100%;} 
 li{list-style:none} 
-a{text-decoration:none;}
+a{text-decoration:none;} */
 
 .content{
   width:100%;
@@ -127,6 +127,55 @@ a{text-decoration:none;}
     box-shadow: 2px 2px 3px 2.5px rgba(0, 0, 0, 0.2);
     float: left;
 }
+
+
+#box{
+    width:1200px;
+    height:600px;
+    background: white;
+}
+#box>div:first-child{
+    width:600px;
+    height: 500px;
+    background: white;
+    float:right;
+    position:absolute;
+    top:30px;
+    left:600px;
+    border-radius: 20px;
+    border-color: grey;
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+}
+#box>div:nth-child(2){
+    width:320px;
+    height: 190px;
+    background:white;
+    float:left;
+    position:absolute;
+    top: 30px;
+    left:230px;
+    border-radius: 20px;
+    border-color: grey;
+    border-width: 2px;
+    border-style: solid;
+}
+#box>div:last-child{
+    width:320px;
+    height: 320px;
+    background: white;
+    float:left;
+    position:absolute;
+    top: 260px;
+    left:230px;
+    border-radius: 20px;
+    border-color: grey;
+    border-width: 2px;
+    border-style: solid;
+}
+
+
 .right img{
     padding:10px 20px 10px 40px;
     width:500px;

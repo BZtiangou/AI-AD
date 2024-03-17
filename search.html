@@ -9,6 +9,8 @@
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <!-- <script src="js/index.js"></script> -->
     <script>
+
+
         $(function () {
             $.get("top.html", function (data) {
                 $(".top").html(data);
@@ -16,12 +18,25 @@
             $.get("nav.html", function (data) {
                 $(".nav").html(data);
             });
-            $('#find').on('click',function(){
-                location.href='detail.html';
+            $('#find').on('click', function () {
+                location.href = 'detail.html';
             });
+            $('#find2').on('click', function () {
+                location.href = 'lisi.html';
+            });
+            $('#find3').on('click', function () {
+                location.href = 'wangwu.html';
+            });
+            $('#find4').on('click', function () {
+                location.href = 'zhaoliu.html';
+            });
+            $('#find5').on('click', function () {
+                location.href = 'laoliu.html';
+            });
+
         })
-        function toSearch(){
-            location.href="search.html";
+        function toSearch() {
+            location.href = "search.html";
         }
     </script>
 </head>
@@ -38,8 +53,8 @@
                     <!-- <img src="img/content/index/row1.png" class="pic2" onclick="toSearch()"/> -->
                 </div>
                 <div class="tr2">
-                    <img src="img/content/index/textSearch.png"/>
-                    <input type="text" placeholder="请输入患者姓名、医生姓名等关键词"/>
+                    <img src="img/content/index/textSearch.png" />
+                    <input type="text" placeholder="请输入患者姓名、医生姓名等关键词" />
                 </div>
                 <div class="tr3">
                     <div class="bar">性别</div>
@@ -87,27 +102,27 @@
                 <div class="tr2">
                     <div class="title">
                         <div class="font">姓名</div>
-                        <img src="img/content/index/row3.png"/>
+                        <img src="img/content/index/row3.png" />
                     </div>
                     <div class="title">
                         <div class="font">性别</div>
-                        <img src="img/content/index/row3.png"/>
+                        <img src="img/content/index/row3.png" />
                     </div>
                     <div class="title">
                         <div class="font">年龄</div>
-                        <img src="img/content/index/row3.png"/>
+                        <img src="img/content/index/row3.png" />
                     </div>
                     <div class="title1">
                         <div class="font">OCT图像</div>
-                        <img src="img/content/index/row3.png"/>
+                        <img src="img/content/index/row3.png" />
                     </div>
                     <div class="title1">
                         <div class="font">报告状态</div>
-                        <img src="img/content/index/row3.png"/>
+                        <img src="img/content/index/row3.png" />
                     </div>
                     <div class="title1">
                         <div class="font">日期</div>
-                        <img src="img/content/index/row3.png"/>
+                        <img src="img/content/index/row3.png" />
                     </div>
                     <div class="title1">
                         <div class="font">患者详情</div>
@@ -122,7 +137,7 @@
                         <div class="grid2 prestart">待生成</div>
                         <div class="grid2">2022.10.13</div>
                         <div class="grid2 find" id="find">
-                            <img src="img/content/index/find.png"/>
+                            <img src="img/content/index/find.png" />
                             <div class="font">查看详情</div>
                         </div>
                     </div>
@@ -133,8 +148,8 @@
                         <div class="grid2 uploaded">已上传</div>
                         <div class="grid2 starting">生成中</div>
                         <div class="grid2">2022.10.13</div>
-                        <div class="grid2 find" id="find">
-                            <img src="img/content/index/find.png"/>
+                        <div class="grid2 find" id="find2">
+                            <img src="img/content/index/find.png" />
                             <div class="font">查看详情</div>
                         </div>
                     </div>
@@ -145,8 +160,8 @@
                         <div class="grid2 uploaded">已上传</div>
                         <div class="grid2 started">已生成</div>
                         <div class="grid2">2022.10.12</div>
-                        <div class="grid2 find" id="find">
-                            <img src="img/content/index/find.png"/>
+                        <div class="grid2 find" id="find3">
+                            <img src="img/content/index/find.png" />
                             <div class="font">查看详情</div>
                         </div>
                     </div>
@@ -157,8 +172,8 @@
                         <div class="grid2 noupload">未上传</div>
                         <div class="grid2 nostart">未生成</div>
                         <div class="grid2">2022.10.13</div>
-                        <div class="grid2 find" id="find">
-                            <img src="img/content/index/find.png"/>
+                        <div class="grid2 find" id="find4">
+                            <img src="img/content/index/find.png" />
                             <div class="font">查看详情</div>
                         </div>
                     </div>
@@ -169,8 +184,8 @@
                         <div class="grid2 uploaded">已上传</div>
                         <div class="grid2 starting">生成中</div>
                         <div class="grid2">2022.10.13</div>
-                        <div class="grid2 find" id="find">
-                            <img src="img/content/index/find.png"/>
+                        <div class="grid2 find" id="find5">
+                            <img src="img/content/index/find.png" />
                             <div class="font">查看详情</div>
                         </div>
                     </div>
@@ -179,4 +194,5 @@
         </div>
     </div>
 </body>
+
 </html>

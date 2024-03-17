@@ -20,6 +20,81 @@
         function toSearch(){
             location.href="search.html";
         }
+
+    function addnew() {
+            // 创建遮罩层
+            var overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+
+            // 创建窗口容器
+            var modalContainer = document.createElement('div');
+            modalContainer.classList.add('modal-container');
+
+            // 创建窗口内容
+            var modalContent = document.createElement('div');
+            modalContent.classList.add('modal-content');
+
+            // 创建标题
+            var modalTitle = document.createElement('h2');
+            modalTitle.textContent = '添加新患者';
+            modalContent.appendChild(modalTitle);
+
+            // 创建输入框：医生姓名
+            var doctorNameInput = document.createElement('input');
+            doctorNameInput.setAttribute('type', 'text');
+            doctorNameInput.setAttribute('placeholder', '请输入医生姓名');
+            modalContent.appendChild(doctorNameInput);
+
+            // 创建输入框：患者报告单号
+            var patientReportNumberInput = document.createElement('input');
+            patientReportNumberInput.setAttribute('type', 'text');
+            patientReportNumberInput.setAttribute('placeholder', '请输入患者报告单号');
+            modalContent.appendChild(patientReportNumberInput);
+
+            // 创建确认提交按钮
+            var confirmButton = document.createElement('button');
+            confirmButton.textContent = '确认提交';
+            confirmButton.addEventListener('click', function () {
+                // 获取输入框中的值
+                var doctorName = doctorNameInput.value;
+                var reportNumber = patientReportNumberInput.value;
+
+                // 检查报告单号是否正确
+                if (reportNumber.trim() !== '') {
+                    // 弹出提示框
+                    alert('请确认您的报告单号是否正确！');
+                } else {
+                    // 在这里添加提交逻辑
+                    // 可以使用 doctorName 和 reportNumber 获取输入框中的值
+                    // 提交完成后关闭窗口
+                    overlay.remove();
+                    modalContainer.remove();
+                }
+            });
+            modalContent.appendChild(confirmButton);
+
+            // 创建取消按钮
+            var cancelButton = document.createElement('button');
+            cancelButton.textContent = '取消';
+            cancelButton.addEventListener('click', function () {
+                // 关闭窗口
+                overlay.remove();
+                modalContainer.remove();
+            });
+            modalContent.appendChild(cancelButton);
+
+            // 将窗口内容添加到窗口容器中
+            modalContainer.appendChild(modalContent);
+
+            // 将窗口容器添加到遮罩层中
+            overlay.appendChild(modalContainer);
+
+            // 将遮罩层添加到页面中
+            document.body.appendChild(overlay);
+        }
+    function tolisi(){
+            location.href="lisi.html";
+        }
     </script>
 </head>
 
@@ -33,7 +108,7 @@
                 <div class="tr1">
                     <img src="img/content/index/recentPic.png" class="pic1">
                     <div class="font1">最近影像</div>
-                    <img src="img/content/index/row1.png" class="pic2"/>
+                    <!-- <img src="img/content/index/row1.png" class="pic2" /> -->
                 </div>
                 <div class="tr2">
                     <div class="img1">
@@ -44,18 +119,18 @@
                                 <div class="t2_1">年龄:61岁</div>
                                 <div class="t2_2">2022.10.12 10:08</div>
                             </div>
-                            <img src="img/content/index/row2.png" />
+                            <img src="img/content/index/row2.png" onclick="redirectToReportPage()"/>
                         </div> 
                     </div>
                     <div class="img2">
-                        <img src="img/content/index/李四影像.png"/>
+                        <img src="img/content/index/李四影像.png" onclick="tolisi()"/>
                         <div class="information">
                             <div class="t1">李四</div>
                             <div class="t2">
                                 <div class="t2_1">年龄:68岁</div>
                                 <div class="t2_2">2022.10.12 08:08</div>
                             </div>
-                            <img src="img/content/index/row2.png" />
+                            <img src="img/content/index/row2.png" onclick="tolisi()"/>
                         </div> 
                     </div>
                     
@@ -112,7 +187,7 @@
                     <img src="img/content/index/record.png" class="pic1">
                     <div class="font1">患者档案</div>
                     <div class="right">
-                        <img src="img/content/index/add.png" class="pic2"/>
+                        <img src="img/content/index/add.png" onclick="addnew()">
                         <div class="rightText">添加新患者</div>
                     </div>
                 </div>
