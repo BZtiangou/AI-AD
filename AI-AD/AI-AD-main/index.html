@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Healthcare</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $.get("top.html", function (data) {
+                $(".top").html(data);
+            });
+            $.get("nav.html", function (data) {
+                $(".nav").html(data);
+            });
+            $('.search .one .select,.search .tr3 .bar').click(function () {
+                $('.search .one .select,.search .tr3 .bar').removeClass('click')
+                $(this).addClass('click')
+            })
+            $('.search .two .select,.search .tr3 .bar').click(function () {
+                $('.search .two .select,.search .tr3 .bar').removeClass('click')
+                $(this).addClass('click')
+            })
+            $('.search .three .select,.search .tr3 .bar').click(function () {
+                $('.search .three .select,.search .tr3 .bar').removeClass('click')
+                $(this).addClass('click')
+            })
+            $('.search .four .select,.search .tr3 .bar').click(function () {
+                $('.search .four .select,.search .tr3 .bar').removeClass('click')
+                $(this).addClass('click')
+            })
+        })
+        // 因为添加了a标签了，所以把这个跳转函数给注释掉了
+        // function toSearch() {
+        //     location.href = "search.html";
+
+        // }
+        function addnew() {
+            const modal = new bootstrap.Modal('.show-modal')
+            modal.show()
+            document.querySelector('.add-btn').addEventListener('click', () => {
+                alert('您输入的患者报告单有误')
+            })
+        }
+        // function addnew() {
+        //     // 创建遮罩层
+        //     var overlay = document.createElement('div');
+        //     overlay.classList.add('overlay');
+
+        //     // 创建窗口容器
+        //     var modalContainer = document.createElement('div');
+        //     modalContainer.classList.add('modal-container');
+
+        //     // 创建窗口内容
+        //     var modalContent = document.createElement('div');
+        //     modalContent.classList.add('modal-content');
+
+        //     // 创建标题
+        //     var modalTitle = document.createElement('h2');
+        //     modalTitle.textContent = '添加新患者';
+        //     modalContent.appendChild(modalTitle);
+
+        //     // 创建输入框：医生姓名
+        //     var doctorNameInput = document.createElement('input');
+        //     doctorNameInput.setAttribute('type', 'text');
+        //     doctorNameInput.setAttribute('placeholder', '请输入医生姓名');
+        //     modalContent.appendChild(doctorNameInput);
+
+        //     // 创建输入框：患者报告单号
+        //     var patientReportNumberInput = document.createElement('input');
+        //     patientReportNumberInput.setAttribute('type', 'text');
+        //     patientReportNumberInput.setAttribute('placeholder', '请输入患者报告单号');
+        //     modalContent.appendChild(patientReportNumberInput);
+
+        //     // 创建确认提交按钮
+        //     var confirmButton = document.createElement('button');
+        //     confirmButton.textContent = '确认提交';
+        //     confirmButton.addEventListener('click', function () {
+        //         // 获取输入框中的值
+        //         var doctorName = doctorNameInput.value;
+        //         var reportNumber = patientReportNumberInput.value;
+
+        //         // 检查报告单号是否正确
+        //         if (reportNumber.trim() !== '') {
+        //             // 弹出提示框
+        //             alert('请确认您的报告单号是否正确！');
+        //         } else {
+        //             // 在这里添加提交逻辑
+        //             // 可以使用 doctorName 和 reportNumber 获取输入框中的值
+        //             // 提交完成后关闭窗口
+        //             overlay.remove();
+        //             modalContainer.remove();
+        //         }
+        //     });
+        //     modalContent.appendChild(confirmButton);
+
+        //     // 创建取消按钮
+        //     var cancelButton = document.createElement('button');
+        //     cancelButton.textContent = '取消';
+        //     cancelButton.addEventListener('click', function () {
+        //         // 关闭窗口
+        //         overlay.remove();
+        //         modalContainer.remove();
+        //     });
+        //     modalContent.appendChild(cancelButton);
+
+        //     // 将窗口内容添加到窗口容器中
+        //     modalContainer.appendChild(modalContent);
+
+        //     // 将窗口容器添加到遮罩层中
+        //     overlay.appendChild(modalContainer);
+
+        //     // 将遮罩层添加到页面中
+        //     document.body.appendChild(overlay);
+        // }
+        function tolisi() {
+            location.href = "lisi.html";
+        }
+        function toZhangSan() {
+            location.href = "detail.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="top"></div>
+    <!-- <img src="img/content/index/row1.png" class="pic2" /> -->
+    <div class="content">
+        <div class="nav"></div>
+        <div class="main">
+            <!-- 用一个盒子来充当上面的两个盒子的版心，就不需要浮动来完成了 -->
+            <div class="container">
+                <div class="recentPic">
+                    <div class="tr1">
+                        <img src="img/content/index/recentPic.png" class="pic1">
+                        <div class="font1">最近影像</div>
+                    </div>
+                    <div class="tr2">
+                        <div class="img1">
+                            <img src="img/content/index/张三影像.png" onclick="toZhangSan()" />
+                            <div class="information">
+                                <div class="t1">张三</div>
+                                <div class="t2">
+                                    <div class="t2_1">年龄:61岁</div>
+                                    <div class="t2_2">2022.10.12 10:08</div>
+                                </div>
+                                <img src="img/content/index/row2.png" onclick="toZhangSan()" />
+                            </div>
+                        </div>
+                        <div class="img2">
+                            <img src="img/content/index/李四影像.png" onclick="tolisi()" />
+                            <div class="information">
+                                <div class="t1">李四</div>
+                                <div class="t2">
+                                    <div class="t2_1">年龄:68岁</div>
+                                    <div class="t2_2">2022.10.12 08:08</div>
+                                </div>
+                                <img src="img/content/index/row2.png" onclick="tolisi()" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search">
+                    <div class="tr1">
+                        <a href=""></a>
+                        <img src="img/content/index/search.png" class="pic1" style="width:25px;height:20px;">
+                        <div class="font1">条件搜索</div>
+                        <a href="./search.html" target="_blank">
+                            <img src="img/content/index/row1.png" class="pic2" />
+                        </a>
+                    </div>
+                    <div class="tr2">
+                        <img src="img/content/index/textSearch.png" />
+                        <input type="text" placeholder="请输入患者姓名、医生姓名等关键词" />
+                    </div>
+                    <div class="tr3 four">
+                        <div class="bar click">性别</div>
+                        <div class="select selected">全部</div>
+                        <div class="select">男</div>
+                        <div class="select">女</div>
+                    </div>
+                    <!-- 我的想法是：因为一栏中只能有一个被选中，但是第二栏，第三栏，第四栏是不受影响的，说明被清空class list的只有对应的本栏，所以我多加了几个类 -->
+                    <div class="tr3 one">
+                        <div class="bar click">年龄</div>
+                        <div class="select selected">全部</div>
+                        <div class="select">55及以下</div>
+                        <div class="select">56~60</div>
+                        <div class="select">61~65</div>
+                        <div class="select">66~70</div>
+                        <div class="select">71及以上</div>
+                    </div>
+                    <div class="tr3 two">
+                        <div class="bar click">OCT图像</div>
+                        <div class="select selected">全部</div>
+                        <div class="select">未上传</div>
+                        <div class="select">已上传</div>
+                    </div>
+                    <div class="tr3 three">
+                        <div class="bar click">报告状态</div>
+                        <div class="select selected">全部</div>
+                        <div class="select">未开始</div>
+                        <div class="select">待生成</div>
+                        <div class="select">生成中</div>
+                        <div class="select">已生成</div>
+                    </div>
+                    <div class="tr3">
+                        <div class="bar click">日期</div>
+                        <input type="date" class="date">
+                        <div style="float:left;">~</div>
+                        <input type="date" class="date">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="record">
+                <div class="tr1">
+                    <img src="img/content/index/record.png" class="pic1">
+                    <div class="font1">患者档案</div>
+                    <div class="right">
+                        <img src="img/content/index/add.png" onclick="addnew()">
+                        <div class="rightText">添加新患者</div>
+                    </div>
+                </div>
+                <div class="tr2">
+                    <div class="title">
+                        <div class="font">姓名</div>
+                        <img src="img/content/index/row3.png" />
+                    </div>
+                    <div class="title">
+                        <div class="font">性别</div>
+                        <img src="img/content/index/row3.png" />
+                    </div>
+                    <div class="title">
+                        <div class="font">年龄</div>
+                        <img src="img/content/index/row3.png" />
+                    </div>
+                    <div class="title1">
+                        <div class="font">OCT图像</div>
+                        <img src="img/content/index/row3.png" />
+                    </div>
+                    <div class="title1">
+                        <div class="font">报告状态</div>
+                        <img src="img/content/index/row3.png" />
+                    </div>
+                    <div class="title1">
+                        <div class="font">日期</div>
+                        <img src="img/content/index/row3.png" />
+                    </div>
+                </div>
+                <div class="tr3">
+                    <div class="line">
+                        <div class="grid1">张三</div>
+                        <div class="grid1">男</div>
+                        <div class="grid1">71</div>
+                        <div class="grid2 uploaded">已上传</div>
+                        <div class="grid2 prestart">待生成</div>
+                        <div class="grid2">2022.10.13</div>
+                    </div>
+                    <div class="line">
+                        <div class="grid1">李四</div>
+                        <div class="grid1">男</div>
+                        <div class="grid1">68</div>
+                        <div class="grid2 uploaded">已上传</div>
+                        <div class="grid2 starting">生成中</div>
+                        <div class="grid2">2022.10.13</div>
+                    </div>
+                    <div class="line">
+                        <div class="grid1">王五</div>
+                        <div class="grid1">男</div>
+                        <div class="grid1">66</div>
+                        <div class="grid2 uploaded">已上传</div>
+                        <div class="grid2 started">已生成</div>
+                        <div class="grid2">2022.10.12</div>
+                    </div>
+                    <div class="line">
+                        <div class="grid1">赵六</div>
+                        <div class="grid1">男</div>
+                        <div class="grid1">69</div>
+                        <div class="grid2 noupload">未上传</div>
+                        <div class="grid2 nostart">未生成</div>
+                        <div class="grid2">2022.10.13</div>
+                    </div>
+                    <div class="line">
+                        <div class="grid1">老六</div>
+                        <div class="grid1">男</div>
+                        <div class="grid1">67</div>
+                        <div class="grid2 uploaded">已上传</div>
+                        <div class="grid2 starting">生成中</div>
+                        <div class="grid2">2022.10.13</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 引入bootstrap弹框 -->
+    <div class="modal fade show-modal">
+        <!-- 中间白色区域 -->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="justify-content: center;">
+                    <span>添加病人信息</span>
+                    <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body form-wrap">
+                    <!-- 新增表单 -->
+                    <form class="add-form">
+                        <div class="mb-3">
+                            <label for="bookname" class="form-label">患者姓名</label>
+                            <input type="text" class="form-control bookname" placeholder="请输入患者姓名" name="bookname">
+                        </div>
+                        <div class="mb-3">
+                            <label for="author" class="form-label">医生编号</label>
+                            <input type="text" class="form-control author" placeholder="请输入医生编号" name="author">
+                        </div>
+                        <div class="mb-3">
+                            <label for="publisher" class="form-label">报告单号</label>
+                            <input type="text" class="form-control publisher" placeholder="请输入报告单号" name="publisher">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer btn-group">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"> 取消 </button>
+                    <button type="button" class="btn btn-primary add-btn"> 保存 </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script>
+        gsap.timeline()
+            .from('.project_top', { opacity: 0, duration: 0.5 })
+            .from('.recentPic', { opacity: 0, duration: 0.5 })
+            .from('.search', { opacity: 0, duration: 0.5 })
+            .from('.record', { opacity: 0, duration: 0.5 })
+    </script>
+</body>
+
+</html>

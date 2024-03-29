@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Healthcare</title>
+    <link href="css/detail.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <!-- <script src="js/index.js"></script> -->
+    <script>
+        $(function () {
+            $.get("top.html", function (data) {
+                $(".top").html(data);
+            });
+            
+            $('#find').on('click',function(){
+                location.href='detail.html';
+            });
+        })
+        function toSearch(){
+            location.href="search.html";
+        }
+        function toDetail(){
+            location.href="detail.html";
+        }
+        function toReport(){
+            location.href="report.html";
+        }
+        function toindex(){
+            location.href="index.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="top"></div>
+    <div class="nav">
+        <div class="block"> </div>
+        <div class="line back" onclick="toSearch()">
+            <img src="img/content/detail/back.png"/>
+            <div class="font">返回</div>
+        </div>
+        <div class="line" onclick="toDetail()">
+            <img src="img/content/detail/shadow_0.png"/>
+            <div class="font">患者影像</div>
+        </div>
+        <div class="line selected" onclick="toReport()">
+            <img src="img/content/detail/report_1.png"/>
+            <div class="font">患者报告</div>
+        </div>
+        <div class="line" onclick="toindex()">
+            <img src="img/content/detail/report_0.png"/>
+            <div class="font">主页</div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="left">
+            <div class="left1">
+                <img src="img/content/detail/1.png"/>
+            </div>
+            <div class="left2">
+                <img src="img/content/detail/2.png"/>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/content/detail/3.png"/>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="block"> </div>
+        <div class="line back" onclick="toSearch()">
+            <img src="img/content/detail/back.png"/>
+            <div class="font">返回</div>
+        </div>
+        <div class="line selected" onclick="toDetail()">
+            <img src="img/content/detail/shadow_1.png"/>
+            <div class="font">患者影像</div>
+        </div>
+        <div class="line" onclick="toReport()">
+            <img src="img/content/detail/report_0.png"/>
+            <div class="font">患者报告</div>
+        </div>
+        <div class="line" onclick="toindex()">
+            <img src="img/content/detail/report_0.png"/>
+            <div class="font">主页</div>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>
